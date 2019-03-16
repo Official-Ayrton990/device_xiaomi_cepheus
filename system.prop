@@ -17,6 +17,7 @@ persist.vendor.dpm.nsrm.bkg.evt=3955
 # Graphics
 ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
+debug.cpurend.vsync=false
 
 # Media
 media.aac_51_output_enabled=true
