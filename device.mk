@@ -280,11 +280,10 @@ PRODUCT_PACKAGES += \
     com.nxp.nfc.nq \
     libnqnfc_nci_jni \
     NfcNci \
-    Tag
 
 PRODUCT_PACKAGES += \
     nfc_nci.nqx.default.hw \
-    vendor.nxp.hardware.nfc@1.2-service
+    vendor.nxp.hardware.nfc@2.0-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
