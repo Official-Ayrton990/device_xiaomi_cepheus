@@ -976,3 +976,19 @@ vendor/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 vendor/lib/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 vendor/lib64/libmmosal_proprietary.so
 vendor/lib64/libmmparser_lite_proprietary.so
+
+# Soter
+-app/SoterService/SoterService.apk
+vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
+vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.soter@1.0.so
+
+# Mlipay
+vendor/bin/mlipayd@1.1
+vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc
+vendor/lib64/libmlipay.so
+vendor/lib64/libmlipay@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so
+vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so
+vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so
