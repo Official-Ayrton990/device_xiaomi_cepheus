@@ -91,6 +91,20 @@ case "$target" in
     echo 95 95 > /proc/sys/kernel/sched_upmigrate
     echo 85 85 > /proc/sys/kernel/sched_downmigrate
 
+    # Setup final blkio
+    # value for group_idle is us
+    echo 1000 > /dev/blkio/blkio.weight
+    echo 200 > /dev/blkio/background/blkio.weight
+    echo 2000 > /dev/blkio/blkio.group_idle
+    echo 0 > /dev/blkio/background/blkio.group_idle
+
+    # Setup final blkio
+    # value for group_idle is us
+    echo 1000 > /dev/blkio/blkio.weight
+    echo 100 > /dev/blkio/background/blkio.weight
+    echo 2000 > /dev/blkio/blkio.group_idle
+    echo 0 > /dev/blkio/background/blkio.group_idle
+
     # Configure governor settings for silver cluster
     echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
