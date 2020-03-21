@@ -294,15 +294,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "UfsHibern8Enable",
-      "Path": "/sys/devices/platform/soc/1d84000.ufshc/hibern8_on_idle_enable",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "EnergyAware",
       "Path": "/proc/sys/kernel/sched_energy_aware",
       "Values": [
@@ -435,12 +426,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "UfsHibern8Enable",
-      "Duration": 200,
-      "Value": "0"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "EnergyAware",
       "Duration": 5000,
@@ -543,12 +528,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "LAUNCH",
-      "Node": "UfsHibern8Enable",
-      "Duration": 5000,
-      "Value": "0"
-    },
-    {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "EnergyAware",
       "Duration": 1000,
@@ -603,11 +582,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "UfsHibern8Enable",
-      "Duration": 1000,
-      "Value": "0"
-    },
     {
       "PowerHint": "CAMERA_STREAMING",
       "Node": "PowerHALMainState",
