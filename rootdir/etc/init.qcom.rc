@@ -232,6 +232,18 @@ service vendor.ssr_setup /vendor/bin/ssr_setup
     oneshot
 
 on property:sys.boot_completed=1
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
+    # Enable EAS
+    write /sys/kernel/debug/sched_features ENERGY_AWARE
+
+    # Enable UFS powersaving
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkscale_enable 1
+    write /sys/devices/soc/${ro.boot.bootdevice}/clkgate_enable 1
+    write /sys/module/lpm_levels/parameters/sleep_disabled N
+
     chown media audio /sys/kernel/wdsp0/boot
 
     start qcom-post-boot
