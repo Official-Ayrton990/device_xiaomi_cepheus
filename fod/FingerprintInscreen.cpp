@@ -42,7 +42,6 @@
 #define FOD_SENSOR_SIZE 173
 
 namespace {
-
 template <typename T>
 static void set(const std::string& path, const T& value) {
     std::ofstream file(path);
@@ -75,7 +74,7 @@ namespace lineage {
 namespace biometrics {
 namespace fingerprint {
 namespace inscreen {
-namespace V1_0 {
+namespace V1_1 {
 namespace implementation {
 
 FingerprintInscreen::FingerprintInscreen() {
@@ -172,7 +171,7 @@ Return<void> FingerprintInscreen::setCallback(const sp<IFingerprintInscreenCallb
 }
 
 }  // namespace implementation
-}  // namespace V1_0
+}  // namespace V1_1
 }  // namespace inscreen
 }  // namespace fingerprint
 }  // namespace biometrics
