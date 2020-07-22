@@ -83,7 +83,10 @@ function configure_memory_parameters() {
 
 case "$target" in
     "msmnile")
-
+	
+    # Enable EAS
+    echo ENERGY_AWARE > /sys/kernel/debug/sched_features
+	
     # Setting b.L scheduler parameters
     echo 95 95 > /proc/sys/kernel/sched_upmigrate
     echo 85 85 > /proc/sys/kernel/sched_downmigrate
