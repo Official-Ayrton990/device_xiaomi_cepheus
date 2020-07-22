@@ -90,34 +90,30 @@ case "$target" in
     # Setting b.L scheduler parameters
     echo 95 95 > /proc/sys/kernel/sched_upmigrate
     echo 85 85 > /proc/sys/kernel/sched_downmigrate
-    echo 100 > /proc/sys/kernel/sched_group_upmigrate
-    echo 10 > /proc/sys/kernel/sched_group_downmigrate
-    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
     # Configure governor settings for silver cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-    echo 1209600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
-    echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
+    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+    echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+    echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 
     # Configure governor settings for gold cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-    echo 1612800 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
-    echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
+    echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+    echo 500 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+    echo 20000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 
     # Configure governor settings for gold+ cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-    echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
-    echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
-
-    # Configure input boost settings
-    echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
+    echo "schedutil" > /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
+    echo 500 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
+    echo 20000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 
     # Disable wsf, beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
