@@ -1,1 +1,5 @@
+#socket
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+
 type sysfs_device_info, sysfs_type, fs_type;
