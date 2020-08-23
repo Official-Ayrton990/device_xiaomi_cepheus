@@ -81,20 +81,12 @@ function configure_memory_parameters() {
     echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
 }
 
-# Tune FS
-	echo 3000 > /proc/sys/vm/dirty_expire_centisecs
-	echo 10 > /proc/sys/vm/dirty_background_ratio
-# Tune for WALT
-	echo 15 > /proc/sys/kernel/sched_group_downmigrate
-	echo 400000000 > /proc/sys/kernel/sched_coloc_downmigrate_ns
-	echo 30 > /proc/sys/kernel/sched_min_task_util_for_colocation
-
-
 case "$target" in
     "msmnile")
+	
     # Enable EAS
     echo ENERGY_AWARE > /sys/kernel/debug/sched_features
-
+	
     # Setting b.L scheduler parameters
     echo 95 95 > /proc/sys/kernel/sched_upmigrate
     echo 85 85 > /proc/sys/kernel/sched_downmigrate
@@ -113,30 +105,14 @@ case "$target" in
     echo 2000 > /dev/blkio/blkio.group_idle
     echo 0 > /dev/blkio/background/blkio.group_idle
 
-    # cpuset parameters
-    echo 0-7 /dev/cpuset/top-app/cpus
-    echo 0-3,5-6 /dev/cpuset/foreground/cpus
-    echo 0-3 /dev/cpuset/background/cpus
-    echo 0-3,5-6 /dev/cpuset/system-background/cpus
-    echo 0-3 /dev/cpuset/restricted/cpus
-
     # Configure governor settings for silver cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-    echo 5000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-    echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/iowait_boost_enable
+    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
     # Configure governor settings for gold cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-    echo 5000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
-    echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/iowait_boost_enable
+    echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
 
     # Configure governor settings for gold+ cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-    echo 5000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
-    echo 1000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/down_rate_limit_us
-    echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/iowait_boost_enable
+    echo "schedutil" > /sys/devices/system/cpu/cpu7/cpufreq/scaling_governor
 
     # Disable wsf, beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
