@@ -255,7 +255,11 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.xiaomi-libperfmgr \
+    android.hardware.power@1.3-service.xiaomi_sm8150
+
+# libperfmgr
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.3-service.pixel-libperfmgr \
     powerhint.json
 
 # QTI
