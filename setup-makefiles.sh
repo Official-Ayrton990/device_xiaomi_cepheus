@@ -7,6 +7,13 @@
 
 set -e
 
+# Required!
+export DEVICE=cepheus
+export DEVICE_COMMON=cepheus
+export VENDOR=xiaomi
+
+export DEVICE_BRINGUP_YEAR=2019
+
 INITIAL_COPYRIGHT_YEAR=2018
 
 # Load extract_utils and do some sanity checks

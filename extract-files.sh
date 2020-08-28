@@ -15,7 +15,7 @@ set -e
 
 # Required!
 export DEVICE=cepheus
-export DEVICE_COMMON=sm8150-common
+export DEVICE_COMMON=cepheus
 export VENDOR=xiaomi
 
 export DEVICE_BRINGUP_YEAR=2019
