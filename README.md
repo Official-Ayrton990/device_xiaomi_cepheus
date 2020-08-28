@@ -1,4 +1,5 @@
 Copyright (C) 2020 - The LineageOS Project
+
 Copyright (C) 2020 - Android Open Source illusion Project
 
 Device configuration for Xiaomi Mi 9
