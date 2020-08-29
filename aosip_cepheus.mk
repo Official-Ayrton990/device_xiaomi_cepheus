@@ -16,7 +16,8 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI 9
 PRODUCT_MANUFACTURER := Xiaomi
 
-
+# Extra FOD stuff
+TARGET_HAS_FOD := true
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="cepheus-user 10 QKQ1.190825.002 V11.0.2.0 release-keys" \
