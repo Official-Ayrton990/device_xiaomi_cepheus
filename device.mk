@@ -269,10 +269,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    com.gsma.services.nfc \
     com.nxp.nfc.nq \
-    libnqnfc_nci_jni \
-    NfcNci \
+    NQNfcNci \
     Tag
 
 PRODUCT_PACKAGES += \
