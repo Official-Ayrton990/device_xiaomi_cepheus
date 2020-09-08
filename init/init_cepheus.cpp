@@ -60,7 +60,10 @@ void vendor_load_properties()
 {
     // fingerprint
     property_override("ro.build.description", "coral-user 10 QQ3A.200805.001 6578210 release-keys");
- 	property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.bootimage.build.fingerprint",
+    property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.bootimage.build.fingerprint",
 	    "ro.vendor.build.fingerprint", "google/coral/coral:10/QQ3A.200805.001/6578210:user/release-keys");
-	property_override("ro.product.model", "BASIC");
+    property_override("ro.product.product.model", "BASIC");
+    property_override("ro.product.odm.model", "BASIC");
+    property_override("ro.product.system.model", "BASIC");
+    property_override("ro.product.vendor.model", "BASIC");
 }
