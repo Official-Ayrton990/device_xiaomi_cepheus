@@ -344,6 +344,10 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils
 
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-lite-vendorcompat \
+    libprotobuf-cpp-full-vendorcompat \
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
