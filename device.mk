@@ -126,6 +126,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.post_boot.sh \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.sh
 
+# Codec2
+PRODUCT_PACKAGES += \
+    libcodec2_hidl@1.0.vendor \
+    libavservices_minijail_vendor
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts \
