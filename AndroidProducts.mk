@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosip_cepheus.mk
+    $(LOCAL_DIR)/revengeos_cepheus.mk
