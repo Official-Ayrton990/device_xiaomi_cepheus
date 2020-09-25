@@ -1,0 +1,20 @@
+[
+  {
+    "repository" : "Dyrex2004/hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch"     : "R",
+    "remote"     : "github"
+  },
+  {
+    "repository" : "Official-Ayrton990/Quantic-Kernel-AOSP-Cepheus",
+    "target_path": "kernel/xiaomi/cepheus",
+    "branch"     : "PELT-11",
+    "remote"     : "github"
+  },
+  {
+    "repository" : "Dyrex2004/vendor_xiaomi_cepheus-dev",
+    "target_path": "vendor/xiaomi/cepheus",
+    "branch"     : "R",
+    "remote"     : "gtihub"
+  }
+]
