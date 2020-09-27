@@ -72,8 +72,11 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
+	"675000000",
         "585000000",
-        "427000000"
+        "427000000",
+        "345000000",
+        "257000000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -96,6 +99,7 @@
         "6881",
         "5931",
         "3879",
+	"2597",
         "0"
       ],
       "ResetOnInit": true
@@ -123,7 +127,8 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
       "Values": [
         "10000",
-        "80"
+        "80",
+	"64"
       ],
       "ResetOnInit": true
     },
