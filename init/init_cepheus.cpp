@@ -34,11 +34,9 @@
 
 #include "vendor_init.h"
 
+using android::base::GetProperty;
 using android::base::SetProperty;
 
-int Setproperty(const char *key, const char *value) {
-    return __system_property_set(key, value);
-}
 
 void property_override(char const prop[], char const value[])
 {
