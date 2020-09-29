@@ -1,0 +1,26 @@
+[
+  {
+    "repository" : "Official-Ayrton990/vendor_xiaomi_firmware",
+    "target_path": "vendor/xiaomi/firmware",
+    "branch"     : "master",
+    "remote"     : "gitlab"
+  },
+  {
+    "repository" : "Official-Ayrton990/hardware_xiaomi",
+    "target_path": "hardware/xiaomi",
+    "branch"     : "lineage-18.0",
+    "remote"     : "github"
+  },
+  {
+    "repository" : "Official-Ayrton990/Quantic-Kernel-AOSP-Cepheus",
+    "target_path": "kernel/xiaomi/cepheus",
+    "branch"     : "PELT-11",
+    "remote"     : "github"
+  },
+  {
+    "repository" : "Official-Ayrton990/vendor_xiaomi_cepheus-dev",
+    "target_path": "vendor/xiaomi/cepheus",
+    "branch"     : "R",
+    "remote"     : "gtihub"
+  }
+]
